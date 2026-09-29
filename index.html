@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основи HTML-верстки</title>
+</head>
+<body>
+    <header>
+        <h1>Лабораторна робота з Веб-технологій</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="#section1">Розділ 1</a></li>
+                <li><a href="#section2">Розділ 2</a></li>
+                <li><a href="#section3">Розділ 3</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ГОЛОВНИЙ КОНТЕЙНЕР -->
+    <main>
+        
+        <section>
+            <h2>Деяка інформація про студентів бригади</h2>
+            <p>Бригада складається з трьох людей, їх імена - Максим, Костянтин, Олексій. Учасники цієї бригади виконують лабораторну роботу на тему Основи HTML-верстки.</p>
+            <p><strong>Мета цієї роботи</strong> - навчитися створювати базову <em>HTML-сторінку</em>.</p>
+
+            <h2>ПОСИЛАННЯ НА ПЛАТФОРМУ JetIQ</h2>
+            <p><a href="https://iq.vntu.edu.ua/">JetIQ</a></p>
+            <p><a href="#section2">Перейти до розділу про розклад</a></p>
+            <img src="https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86" alt="Космічний пейзаж" width="600">
+        </section>
+
+        <!-- РОЗДІЛ 1 -->
+        <section id="section1">
+            <h2>Створення нумерованого, маркованого та вкладеного списку. Розділ 1</h2>
+            
+            <p>НУМЕРОВАНИЙ СПИСОК</p>
+            <ol>
+                <li>Пункт 1</li>
+                <li>Пункт 2</li>
+                <li>Пункт 3</li>
+            </ol>
+
+            <p>МАРКОВАНИЙ СПИСОК</p>
+            <ul>
+                <li>Пункт 1</li>
+                <li>Пункт 2</li>
+                <li>Пункт 3</li>
+            </ul>  
+
+            <p>ВКЛАДЕНИЙ СПИСОК</p>
+            <ul>
+                <li>Головний пункт</li>
+                <li>Головний пункт 2 з підпунктами
+                    <ul>
+                        <li>Пункт 1 вкладений</li>
+                        <li>Пункт 2 вкладений
+                            <ol>
+                                <li>Пункт 3 вкладений глибше</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li>Головний пункт 3</li>
+            </ul>
+        </section>
+
+        <!-- РОЗДІЛ 2 -->
+        <section id="section2">
+            <h2>РОЗКЛАД НА ПОНЕДІЛОК НА ДРУГИЙ ТИЖДЕНЬ ДЛЯ ПЕРШОЇ ПІДГРУПИ. Розділ 2</h2>
+
+            <table border="1">
+                <tr>
+                    <th>День тижня</th>
+                    <th>Номер уроку</th>
+                    <th>Назва дисципліни</th>
+                    <th>Аудиторія</th>
+                </tr>
+                <tr>
+                    <td>Понеділок</td>
+                    <td>1</td>
+                    <td>Веб-технології ПЗ</td>
+                    <td>5225</td>
+                </tr>
+                <tr>
+                    <td>Понеділок</td>
+                    <td>2</td>
+                    <td>Веб-технології ЛК</td>
+                    <td>5104</td>
+                </tr>
+                <tr>
+                    <td>Понеділок</td>
+                    <td>3</td>
+                    <td>Веб-технології ЛК</td>
+                    <td>5104</td>
+                </tr>
+                <tr>
+                    <td>Понеділок</td>
+                    <td>4</td>
+                    <td>КТП, ЛР</td>
+                    <td>5125 1п.</td>
+                </tr>
+                <tr>
+                    <td>Понеділок</td>
+                    <td>5</td>
+                    <td>КТП, ЛР</td>
+                    <td>5125 1п.</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- СТАТТЯ / БЛОК ФОРМИ (сюди чудово підходить <article>) -->
+        <article>
+            <h2>ЗАПОВНІТЬ ФОРМУ</h2>
+
+            <form action="#" method="POST">
+                <label for="username">Ваше ім'я:</label><br>
+                <input type="text" id="username" name="username" placeholder="Уведіть ім'я..."><br><br>
+
+                <label for="email">Уведіть вашу електронну адресу:</label><br>
+                <input type="email" id="email" name="email" placeholder="Email..."><br><br>
+
+                <label for="password">Пароль:</label><br>
+                <input type="password" id="password" name="password" placeholder="Уведіть пароль..."><br><br>
+
+                <label for="date">Уведіть вашу дату народження:</label><br>
+                <input type="date" id="date" name="date"><br><br>
+
+                <label for="number">Уведіть число:</label><br>
+                <input type="number" id="number" name="number" placeholder="Уведіть число..."><br><br>
+
+                <label for="checkbox">Оберіть варіант:</label><br>
+                <select id="checkbox" name="checkbox">
+                    <option value="1">Перший варіант</option>
+                    <option value="2">Другий варіант</option>
+                </select><br><br>
+
+                <label for="radio">Оберіть ЛИШЕ варіант:</label><br>
+                <select id="radio" name="radio">
+                    <option value="1">Третій варіант</option>
+                    <option value="2">Четвертий варіант</option>
+                </select><br><br>
+
+                <label for="skills">Вибери навички:</label><br>
+                <select id="skills" name="skills" multiple size="3">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                </select><br><br>
+
+                <label for="textarea">Повідомлення:</label><br>    
+                <textarea id="textarea" name="textarea" placeholder="Впишіть текст..."></textarea><br><br>
+
+                <button type="submit">ВІДПРАВИТИ</button>
+            </form>
+        </article>
+
+        <!-- РОЗДІЛ 3 -->
+        <section id="section3">
+            <h2>Деякий мультимедійний контент. Розділ 3</h2>
+            <audio src="https://actions.google.com/sounds/v1/ambiences/rain_heavy.ogg" controls></audio><br><br>
+            <video src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" controls width="600"></video>
+        </section>
+
+    </main>
+
+    <footer id="contacts">
+        <p>Автор: Студент ВНТУ, група 1АКІТР-26б, Гулішевський Олексій Романович | Контакти: oleksijgulisevskij@gmail.com +380950134246</p>
+        <p>&copy; 2026 Всі права захищені.</p>
+    </footer>
+
+</body>
+</html>
